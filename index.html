@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OAuth Redirect Handler</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // Extract the necessary OAuth data from the query parameters
+            const params = new URLSearchParams(window.location.search);
+            console.log(params);
+            const code = params.get('code'); // Adjust based on the OAuth response you expect
+            
+            // Construct your app's custom URL scheme with the OAuth data
+            const appUrl = `aimapp://oauth-handle-callback?code=${code}`;
+
+            // Redirect to your app
+            window.location.href = appUrl;
+        };
+    </script>
+</head>
+<body>
+    Redirecting...
+</body>
+</html>
