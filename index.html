@@ -24,7 +24,7 @@
             // Uncomment the next lines in production to redirect to your app
             const code = params.get('code');
             const state = params.get('state');
-            const appUrl = `aimapp://oauth-handle-callback?code=${code}&state=${state}`;
+            const appUrl = `aimappcra://oauth-handle-callback?code=${code}&state=${state}`;
             window.location.href = appUrl;
         };
     </script>
